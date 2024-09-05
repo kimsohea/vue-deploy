@@ -15,7 +15,7 @@
                 <img :src="item" alt="마스코트 고양이" />
             </template>
             <img :src="catHeadArr[headIdx]" alt="마스코트 고양이 머리" />
-            <figurecaption>
+            <figcaption>
                 메인페이지와 서적, 굿즈 등<br />
                 서브페이지도 같이<br />
                 사이트로 구현 했습니다<br />
@@ -25,7 +25,7 @@
                 버튼형 리스트 및 서브메뉴<br />
                 구현을 통해 심플한<br />
                 모양으로 재구성했습니다
-            </figurecaption>
+            </figcaption>
         </figure>
     </section>
 </template>

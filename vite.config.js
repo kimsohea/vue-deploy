@@ -16,5 +16,9 @@ export default defineConfig({
     alias: {
       '@': srcRoot
     }
+  },
+  build: {
+    outDir: join(__dirname, 'dist'),
+    emptyOutDir: true
   }
 })

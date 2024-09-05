@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "homepage": "https://kimsohea.github.io/vue-deploy",
+  "homepage": "https://github.com/kimsohea/vue-deploy",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

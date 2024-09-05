@@ -9,7 +9,11 @@ module.exports = {
     '@vue/eslint-config-prettier/skip-formatting'
   ],
   parserOptions: {
-    ecmaVersion: 2015,
+    ecmaVersion: 2020,
     sourceType: 'module'
+  },
+  env: {
+    node: true,
+    es2021: true
   }
 }

@@ -1,0 +1,90 @@
+@font-face {
+  font-family: 'KyoboHand';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'yg-jalnan';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$baseColor: #5d0f66;
+$subColor: #fcca00;
+$assetPath: '../img/';
+
+// reset & font-famliy
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'KyoboHand';
+  font-size: 14px;
+  background: $baseColor;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+h1,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+i,
+em,
+address {
+  font-style: inherit;
+}
+
+b,
+strong {
+  font-weight: inherit;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+button {
+  font-family: 'KyoboHand';
+}
+
+// 제목태그 공통사항
+h2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24%;
+  min-width: 300px;
+  margin: 0px auto;
+  padding: 10px;
+  border-radius: 20px;
+  background: $subColor;
+  color: #5d0f66;
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}

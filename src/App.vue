@@ -5,17 +5,19 @@
     <MyResume />
     <IntroAladin />
     <AnnounceAladin />
+    <PopupDesign />
   </main>
 </template>
 
 <script>
-import { computed, ref } from 'vue';
+import { computed, ref } from 'vue'
 
-import LoadingPop from '@/components/home/LoadingPop.vue';
-import ProgramUtils from '@/components/home/ProgramUtils.vue';
-import MyResume from '@/components/home/MyResume.vue';
-import IntroAladin from '@/components/home/IntroAladin.vue';
-import AnnounceAladin from '@/components/home/AnnounceAladin.vue';
+import LoadingPop from '@/components/home/LoadingPop.vue'
+import ProgramUtils from '@/components/home/ProgramUtils.vue'
+import MyResume from '@/components/home/MyResume.vue'
+import IntroAladin from '@/components/home/IntroAladin.vue'
+import AnnounceAladin from '@/components/home/AnnounceAladin.vue'
+import PopupDesign from '@/components/home/PopupDesign.vue'
 
 export default {
   components: {
@@ -24,23 +26,24 @@ export default {
     MyResume,
     IntroAladin,
     AnnounceAladin,
+    PopupDesign
   },
   setup() {
     // refs
-    const loadingFlg = ref(true);
+    const loadingFlg = ref(true)
 
     // computed: 메인래퍼 클래스명
     const mainClass = computed(() => {
-      let tmpTxt = 'wrap loading';
-      if (!loadingFlg.value) tmpTxt = tmpTxt.split(' ')[0];
+      let tmpTxt = 'wrap loading'
+      if (!loadingFlg.value) tmpTxt = tmpTxt.split(' ')[0]
       return tmpTxt
-    });
+    })
 
     // return
     return {
       // variables
       loadingFlg,
-      mainClass,
+      mainClass
     }
   }
 }

@@ -790,6 +790,30 @@ $cardBtm: -115px;
                 animation: beamMasheadBanging 2.8s infinite alternate ease-in-out;
             }
         }
+
+        figcaption {
+            position: absolute;
+            top: 200px;
+            left: -20px;
+            width: 200px;
+            padding: 15px;
+            border-radius: 20px;
+            background-color: $subColor;
+            box-sizing: border-box;
+            font-size: 1.2rem;
+            color: $baseColor;
+
+            &:before {
+                position: absolute;
+                bottom: 30px;
+                right: -10px;
+                width: 10px;
+                height: 20px;
+                clip-path: polygon(0 0, 0% 100%, 100% 50%);
+                background-color: #fcca00;
+                content: "";
+            }
+        }
     }
 
     .beam_pro {
@@ -813,6 +837,225 @@ $cardBtm: -115px;
                 bottom: 0;
                 right: 0;
                 width: 230px;
+            }
+        }
+    }
+}
+
+// popup design
+.popup_design {
+    position: relative;
+
+    .card_popup {
+        position: relative;
+        width: 1300px;
+        height: 300px;
+        margin: 0 auto;
+        perspective: 750px;
+        perspective-origin: center;
+
+        li {
+            width: 210px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 8px #000000ff;
+            overflow: hidden;
+            transition: all .5s ease-in-out;
+
+            button {
+                display: block;
+                line-height: 0;
+                cursor: pointer;
+
+                img {
+                    width: 100%;
+                }
+
+                &:after {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 1;
+                    background-image: url('#{$assetPath}/trumpIcon_01.png');
+                    background-position: center;
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    transition: opacity .25s ease-in 0.1s;
+                    content: "";
+                    z-index: 1;
+                }
+            }
+
+            &.card_8 {
+                transform: translate(209%, 32%) rotateX(34deg) rotateY(-37deg) rotateZ(-6deg);
+                z-index: 1;
+            }
+
+            &.card_7 {
+                transform: translate(209%, 32%) rotateX(34deg) rotateY(-37deg) rotateZ(-6deg);
+                z-index: 2;
+            }
+
+            &.card_6 {
+                transform: translate(152%, 25%) rotateX(31deg) rotateY(-20deg) rotateZ(-5deg);
+                z-index: 3;
+            }
+
+            &.card_5 {
+                transform: translate(63%, 15%) rotateX(22deg) rotateY(-18deg) rotateZ(-4deg);
+                z-index: 4;
+            }
+
+            &.card_4 {
+                transform: translate(-50%, 0%) rotateX(5deg) rotateY(179deg) rotateZ(-21deg);
+                z-index: 5;
+
+                button {
+                    &:after {
+                        opacity: 0;
+                        transition: opacity .2s ease-out .2s;
+                    }
+                }
+            }
+
+            &.card_3 {
+                transform: translate(-155%, -7%) rotateX(27deg) rotateY(-2deg) rotateZ(-6deg);
+                z-index: 6;
+            }
+
+            &.card_2 {
+                transform: translate(-225%, -22%) rotateX(30deg) rotateY(3deg) rotateZ(-2deg);
+                z-index: 7;
+            }
+
+            &.card_1 {
+                transform: translate(-315%, -35%) rotateX(33deg) rotateY(5deg) rotateZ(4deg);
+                z-index: 8;
+            }
+
+            &.card_0 {
+                transition: none;
+                transform: translate(-315%, -35%) rotateX(33deg) rotateY(5deg) rotateZ(4deg);
+                z-index: 9;
+            }
+        }
+
+    }
+
+    .card_detail {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 177px;
+        height: 340px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        background-color: $subColor;
+        transition: all 1.5s ease-in-out 0.5s;
+        transform: translate(-50%, -46%) rotateZ(380.5deg) rotateX(270deg) rotateY(340deg) scale(0);
+
+        >* {
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out 1s;
+        }
+
+        .mockup_list {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            li {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                column-gap: 20px;
+                width: 100%;
+                height: 100%;
+                padding: 40px;
+                box-sizing: border-box;
+                opacity: 0;
+                transition: opacity .5s ease-in-out;
+
+
+                figure {
+                    position: relative;
+                    width: 890px;
+                    height: 555px;
+                    border-radius: 10px;
+                    margin: 0;
+                    box-shadow: 0px 0px 15px #3b0042;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                p {
+                    width: 200px;
+                    color: $baseColor;
+                    font-size: 1.2rem;
+                    word-break: keep-all;
+
+                    span {
+                        display: block;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+
+        .btn_list {
+            color: $subColor;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            column-gap: 20px;
+            transition-duration: 0.15s;
+            transition-delay: 0s;
+
+            li {
+                button {
+                    border: none;
+                    background-color: transparent;
+                    font-size: 2rem;
+                    color: $subColor;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &.active {
+            transform: translate(-50%, -50%) rotateZ(0deg) rotateX(0deg) rotateY(0deg) scale(1);
+            width: 1200px;
+            height: 650px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px #3b0042;
+            transition-delay: 0s;
+
+            >* {
+                opacity: 1;
+            }
+
+            ul {
+                li {
+                    &.active {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .btn_list {
+                transition-duration: 1.5s;
+                transition-delay: 1s;
             }
         }
     }

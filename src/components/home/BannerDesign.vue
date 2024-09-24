@@ -20,8 +20,8 @@
         </li>
       </ul>
       <ul class="btn_list">
-        <li><button>prev</button></li>
-        <li><button>next</button></li>
+        <li><button @click="handleMockupSlide(false)">prev</button></li>
+        <li><button @click="handleMockupSlide(true)">next</button></li>
         <li><button @click.prevent="handleClose">close</button></li>
       </ul>
     </article>
@@ -112,6 +112,7 @@ export default {
       bnrIdx.value = idx
       isMockupActive.value = true
     }
+
     const handleMockup = (state) => {
       isMockupActive.value = state
       isClosed.value = false
@@ -120,6 +121,12 @@ export default {
     const handleClose = () => {
       isClosed.value = true
       setTimeout(() => handleMockup(false), 3000)
+    }
+
+    const handleMockupSlide = (state) => {
+      let tmpIdx = bnrIdx.value
+      state ? tmpIdx++ : tmpIdx--
+      bnrIdx.value = tmpIdx > 7 ? 0 : tmpIdx < 0 ? 7 : tmpIdx
     }
 
     return {
@@ -133,7 +140,8 @@ export default {
 
       handleBnrIdx,
       handleMockup,
-      handleClose
+      handleClose,
+      handleMockupSlide
     }
   }
 }

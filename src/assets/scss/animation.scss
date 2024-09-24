@@ -125,47 +125,99 @@
 /* 후광 회전 */
 @keyframes lightSwing {
     0% {
-        transform: translate(22%, -48%) rotateY(180deg) rotate(-24deg);
+        transform: translate(80px, -318px) rotateY(180deg) rotate(-24deg);
     }
 
     100% {
-        transform: translate(22%, -48%) rotateY(180deg) rotate(-17deg);
+        transform: translate(80px, -318px) rotateY(180deg) rotate(-17deg);
     }
 }
 
 /* 배너 카드 나타내는 애니메이션 */
 @keyframes bannerCardAni {
     0% {
-        transform: translate(-150%, -50%) rotate(45deg);
-    }
-
-    100% {
-        transform: translate(940%, -50%) rotate(850deg);
-    }
-}
-
-@keyframes bannerMockupAni {
-    0% {
-        clip-path: polygon(0 0, 0 0, 0 0, 0 0, 0 0, 0 0);
-    }
-
-    5% {
-        clip-path: polygon(43% 0, 42% 0, 0 100%, 0 100%, 0 0);
+        width: 215px;
+        height: 380px;
+        transform: translate(-500%, -50%) rotateZ(-180deg) rotateY(0deg);
+        background-size: 100%;
     }
 
     40% {
-        clip-path: polygon(72% 0, 73% 0, 33% 100%, 0 100%, 0 0);
+        width: 215px;
+        height: 380px;
+        transform: translate(-50%, -50%) rotateZ(360deg) rotateY(0deg);
+        background-size: 100%;
     }
 
-    65% {
-        clip-path: polygon(100% 0, 100% 0, 58% 100%, 0 100%, 0 0);
+    52.5% {
+        width: 215px;
+        height: 380px;
+        transform: translate(-50%, -50%) rotateZ(360deg) rotateY(90deg);
+        background-size: 100%;
     }
 
-    85% {
-        clip-path: polygon(100% 0, 100% 81%, 93% 100%, 0 100%, 0 0);
+    52.51% {
+        width: 215px;
+        height: 380px;
+        transform: translate(-50%, -50%) rotateZ(360deg) rotateY(91deg);
+        background-size: 0%;
+    }
+
+    60% {
+        width: 215px;
+        height: 380px;
+        transform: translate(-50%, -50%) rotateZ(360deg) rotateY(180deg);
+        background-size: 0;
     }
 
     100% {
-        clip-path: polygon(100% 0, 100% 100%, 100% 100%, 0 100%, 0 0);
+        width: 1130px;
+        height: 700px;
+        transform: translate(-50%, -50%) rotateZ(720deg) rotateY(180deg);
+        background-size: 0;
+    }
+}
+
+@keyframes bnrCloseAni {
+    0% {
+        width: 1130px;
+        height: 700px;
+        transform: translate(-50%, -50%) rotateZ(720deg) rotateY(180deg);
+        background-size: 0;
+    }
+
+    30% {
+        width: 215px;
+        height: 380px;
+        transform: translate(-50%, -50%) rotateZ(360deg) rotateY(180deg);
+        background-size: 0;
+    }
+
+    45% {
+        width: 215px;
+        height: 380px;
+        transform: translate(-50%, -50%) rotateZ(360deg) rotateY(91deg);
+        background-size: 0%;
+    }
+
+    45.1% {
+        width: 215px;
+        height: 380px;
+        transform: translate(-50%, -50%) rotateZ(360deg) rotateY(90deg);
+        background-size: 100%;
+    }
+
+    60% {
+        width: 215px;
+        height: 380px;
+        transform: translate(-50%, -50%) rotateZ(360deg) rotateY(0deg);
+        background-size: 100%;
+    }
+
+    100% {
+        width: 215px;
+        height: 380px;
+        transform: translate(-500%, -50%) rotateZ(-180deg) rotateY(0deg);
+        background-size: 100%;
     }
 }

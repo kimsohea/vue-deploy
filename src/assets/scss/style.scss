@@ -845,12 +845,37 @@ $cardBtm: -115px;
 // popup design
 .popup_design {
     position: relative;
+    padding-bottom: 180px;
+    margin-top: 100px;
+
+    >p {
+        text-align: center;
+        color: $subColor;
+        font-size: 1.3rem;
+        margin-top: 20px;
+    }
+
+    .hand_left {
+        position: absolute;
+        width: 315px;
+        transform: rotate(-90deg) translate(-65px, 70px);
+        z-index: 2;
+    }
+
+    .hand_right {
+        position: absolute;
+        right: 50px;
+        bottom: -110px;
+        width: 300px;
+        transform: rotate(-107deg);
+        z-index: -1;
+    }
 
     .card_popup {
         position: relative;
         width: 1300px;
         height: 300px;
-        margin: 0 auto;
+        margin: 150px auto;
         perspective: 750px;
         perspective-origin: center;
 
@@ -866,6 +891,7 @@ $cardBtm: -115px;
 
             button {
                 display: block;
+                border: none;
                 line-height: 0;
                 cursor: pointer;
 
@@ -913,12 +939,43 @@ $cardBtm: -115px;
 
             &.card_4 {
                 transform: translate(-50%, 0%) rotateX(5deg) rotateY(179deg) rotateZ(-21deg);
+                overflow: visible;
                 z-index: 5;
 
                 button {
+                    border-radius: 10px;
+                    overflow: hidden;
+
                     &:after {
                         opacity: 0;
                         transition: opacity .2s ease-out .2s;
+                    }
+
+                    &:before {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 400px;
+                        height: 660px;
+                        opacity: 0;
+                        background-image: url(#{$assetPath}/cardBackLight.png);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        transform: translate(80px, -318px) rotateY(180deg) rotate(-24deg);
+                        transition: all .5s ease-in-out;
+                        transform-origin: 0% 52%;
+                        z-index: -1;
+                        content: "";
+                    }
+                }
+
+                &:hover {
+                    button {
+                        &::before {
+                            opacity: 1;
+                            animation: lightSwing 2s ease-in-out infinite alternate;
+                        }
                     }
                 }
             }
@@ -1056,6 +1113,262 @@ $cardBtm: -115px;
             .btn_list {
                 transition-duration: 1.5s;
                 transition-delay: 1s;
+            }
+        }
+    }
+}
+
+.banner_design {
+    position: relative;
+
+    >p {
+        text-align: center;
+        color: $subColor;
+        font-size: 1.3rem;
+        margin-top: 2%;
+    }
+
+    .bnr_card_list {
+        position: relative;
+        height: 410px;
+        margin: 125px 0 0;
+
+        li {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transform-origin: 50% 100%;
+            transition: all .5s ease-in-out;
+
+            &:after {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: url("#{$assetPath}/trumpIcon_01.png") no-repeat center /contain;
+                clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 0);
+                transition: all .5s ease-in-out;
+                pointer-events: none;
+                content: "";
+            }
+
+            >button {
+                width: 215px;
+                border: 0;
+                background: none;
+                display: flex;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+
+                &::after {
+                    clip-path: polygon(100% 41%, 100% 42%, 100% 100%, 0 100%, 0 59%);
+                }
+            }
+
+            &:nth-of-type(1) {
+                transform: translate(-77%, -53%) rotate(-56deg);
+
+                &:hover {
+                    transform: translate(-137%, -64%) rotate(-60deg);
+                }
+            }
+
+            &:nth-of-type(2) {
+                transform: translate(-72%, -57%) rotate(-43deg);
+
+                &:hover {
+                    transform: translate(-126%, -86%) rotate(-46deg);
+                }
+            }
+
+            &:nth-of-type(3) {
+                transform: translate(-66%, -59%) rotate(-28deg);
+
+                &:hover {
+                    transform: translate(-105%, -92%) rotate(-26deg);
+                }
+            }
+
+            &:nth-of-type(4) {
+                transform: translate(-63%, -61%) rotate(-9deg);
+
+                &:hover {
+                    transform: translate(-79%, -98%) rotate(-13deg);
+                }
+            }
+
+            &:nth-of-type(5) {
+                transform: translate(-54%, -62%) rotate(8deg);
+
+                &:hover {
+                    transform: translate(-50%, -95%) rotate(9deg);
+                }
+            }
+
+            &:nth-of-type(6) {
+                transform: translate(-46%, -60%) rotate(26deg);
+
+                &:hover {
+                    transform: translate(-29%, -98%) rotate(30deg);
+                }
+            }
+
+            &:nth-of-type(7) {
+                transform: translate(-35%, -57%) rotate(42deg);
+
+                &:hover {
+                    transform: translate(0%, -89%) rotate(50deg);
+                }
+            }
+
+            &:nth-of-type(8) {
+                transform: translate(-31%, -53%) rotate(60deg);
+
+                &:hover {
+                    transform: translate(9%, -57%) rotate(65deg);
+                }
+            }
+        }
+    }
+
+    .cat_hand {
+        width: 210px;
+        margin: 0 auto;
+        position: relative;
+        top: -110px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .bnr_mockup_list {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 215px;
+        height: 380px;
+        background-image: url("#{$assetPath}/trumpIcon_01.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-color: $subColor;
+        border-radius: 10px;
+        transform: translate(-500%, -50%) rotateZ(-180deg) rotateY(0deg);
+        overflow: hidden;
+
+        >ul {
+            transform: rotateY(-180deg);
+            position: relative;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 1s ease-in 4s;
+        }
+
+        .mockup_list {
+            width: 100%;
+            height: 100%;
+
+            li {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                box-sizing: border-box;
+                opacity: 0;
+
+                figure {
+                    width: 1017px;
+                    height: 550px;
+                    overflow: hidden;
+                    border-radius: 20px;
+                    line-height: 0;
+                    margin: 0;
+                    box-shadow: 0 0 20px #3b0042;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                p {
+                    color: #5d0f66;
+                    width: 90%;
+                    margin: 10px auto 0;
+                    word-break: keep-all;
+                    text-align: center;
+
+                    span {
+                        margin-left: 25px;
+                    }
+                }
+
+                &.active {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .btn_list {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            display: flex;
+            justify-content: center;
+            column-gap: 20px;
+            transform: translateX(-50%) rotateY(-180deg);
+
+            li {
+                button {
+                    border: 0;
+                    background-color: transparent;
+                    cursor: pointer;
+                    font-size: 2rem;
+                    color: $subColor;
+                }
+            }
+        }
+
+        &.active {
+            animation: bannerCardAni 3.5s ease-in forwards;
+            transition: all 2s ease-in-out;
+            overflow: visible;
+
+            >ul {
+                opacity: 1;
+                transition-duration: 0;
+                transition-delay: 0;
+            }
+
+            &.closed {
+                animation: bnrCloseAni 3s ease-in forwards;
+
+                >ul {
+                    opacity: 0;
+                    transition-duration: 1s;
+
+                    * {
+                        transition: opacity 1s ease;
+                        opacity: 0;
+                    }
+                }
+
+                .btn_list {
+                    transition-duration: 0;
+                }
             }
         }
     }

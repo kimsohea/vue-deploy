@@ -6,6 +6,7 @@
     <IntroAladin />
     <AnnounceAladin />
     <PopupDesign />
+    <BannerDesign />
   </main>
 </template>
 
@@ -18,6 +19,7 @@ import MyResume from '@/components/home/MyResume.vue'
 import IntroAladin from '@/components/home/IntroAladin.vue'
 import AnnounceAladin from '@/components/home/AnnounceAladin.vue'
 import PopupDesign from '@/components/home/PopupDesign.vue'
+import BannerDesign from '@/components/home/BannerDesign.vue'
 
 export default {
   components: {
@@ -26,7 +28,8 @@ export default {
     MyResume,
     IntroAladin,
     AnnounceAladin,
-    PopupDesign
+    PopupDesign,
+    BannerDesign
   },
   setup() {
     // refs

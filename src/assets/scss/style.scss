@@ -1,3 +1,19 @@
+section {
+    >h2 {
+        &:before {
+            position: absolute;
+            top: calc(100% + 4px);
+            left: 50%;
+            width: 4%;
+            height: 10px;
+            transform: translate(-50%, -50%);
+            background-color: $subColor;
+            clip-path: polygon(0% 0%, 15% 20%, 30% 45%, 43% 74%, 50% 100%, 57% 74%, 70% 45%, 85% 20%, 100% 0);
+            content: "";
+        }
+    }
+}
+
 /* 로딩페이지 */
 .loading {
     position: absolute;
@@ -76,18 +92,6 @@ $cardBtm: -115px;
         visibility: hidden;
         transform: translateY(10%);
         transition: all .1s ease-in-out 0s;
-
-        &:before {
-            position: absolute;
-            top: calc(100% + 4px);
-            left: 50%;
-            width: 4%;
-            height: 10px;
-            transform: translate(-50%, -50%);
-            background-color: $subColor;
-            clip-path: polygon(0% 0%, 15% 20%, 30% 45%, 43% 74%, 50% 100%, 57% 74%, 70% 45%, 85% 20%, 100% 0);
-            content: "";
-        }
 
         &+p {
             display: flex;
@@ -362,11 +366,11 @@ $cardBtm: -115px;
                         }
 
                         &:nth-of-type(1) {
-                            transform: translate(-36.5vw, 145px) rotate(350deg) rotateY(0deg);
+                            transform: translate(-32.5vw, 99px) rotate(350deg) rotateY(0deg);
                         }
 
                         &:nth-of-type(2) {
-                            transform: translate(-30vw, -120px) rotate(380deg) rotateY(0deg);
+                            transform: translate(-27.5vw, -140px) rotate(380deg) rotateY(0deg);
                         }
 
                         &:nth-of-type(3) {
@@ -397,6 +401,56 @@ $cardBtm: -115px;
                             transform: translate(29vw, 140px) rotate(340deg) rotateY(0deg);
                         }
                     }
+                }
+            }
+        }
+    }
+
+    .deco {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        box-sizing: border-box;
+        pointer-events: none;
+        z-index: 5;
+
+        li {
+            width: 600px;
+            height: 560px;
+            transform: translate(-50%, -50%);
+            transition: transform .8s cubic-bezier(0, 0, 0.61, 1.27);
+
+            figure {
+                position: relative;
+                margin: 0;
+
+                img {
+                    position: absolute;
+
+                    &:nth-child(1) {
+                        top: 110px;
+                    }
+
+                    &:nth-child(2) {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                transform: translate(50%, -50%) rotateY(180deg);
+            }
+        }
+
+        &.active {
+            li {
+                transform: translate(-3%, -3%);
+
+                &:nth-child(2) {
+                    transform: translate(3%, -3%) rotateY(180deg);
                 }
             }
         }
@@ -453,8 +507,8 @@ $cardBtm: -115px;
 
                 &:nth-of-type(5) {
                     width: 100.8px;
-                    top: 233px;
-                    left: 411px;
+                    top: 232px;
+                    left: 408px;
                     transform: translate(-50%, -50%);
                 }
 
@@ -840,6 +894,24 @@ $cardBtm: -115px;
             }
         }
     }
+
+    .deco {
+        position: absolute;
+        bottom: -50px;
+        z-index: -1;
+
+        img {
+            filter: blur(2px);
+
+            &:nth-of-type(1) {
+                transform: translate(-430px, 30px) rotateZ(-5deg) rotateY(180deg);
+            }
+
+            &:nth-of-type(2) {
+                transform: translate(620px, -30px) rotateZ(7deg) rotateY(180deg);
+            }
+        }
+    }
 }
 
 // popup design
@@ -1116,6 +1188,15 @@ $cardBtm: -115px;
             }
         }
     }
+
+    .deco {
+        position: absolute;
+        left: 100px;
+        bottom: -130px;
+        z-index: -1;
+        filter: blur(2px);
+        transform: rotate(-10deg);
+    }
 }
 
 .banner_design {
@@ -1372,6 +1453,25 @@ $cardBtm: -115px;
                 .btn_list {
                     transition-duration: 0;
                 }
+            }
+        }
+    }
+
+    .deco {
+        position: absolute;
+        left: 5%;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        z-index: -1;
+
+        img {
+            transform: rotateY(180deg);
+            filter: blur(2px);
+
+            &:nth-of-type(1) {
+                transform: translate(30px, 80px) rotateY(180deg) rotateZ(30deg);
             }
         }
     }

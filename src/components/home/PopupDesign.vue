@@ -34,6 +34,7 @@
         <li><button @click.prevent="handleMockup(false)">close</button></li>
       </ul>
     </article>
+    <figure class="deco"><img :src="BackElement" alt="뒷배경 꾸밈 요소" /></figure>
   </section>
 </template>
 
@@ -42,6 +43,7 @@ import { onMounted, onUnmounted, ref } from 'vue'
 
 import LeftHand from '@/assets/img/hand_02.png'
 import RightHand from '@/assets/img/hand_03.png'
+import BackElement from '@/assets/img/popup_back.png'
 
 import PopupCard01 from '@/assets/img/popupCard_01.png'
 import PopupCard02 from '@/assets/img/popupCard_02.png'
@@ -152,6 +154,7 @@ export default {
     return {
       LeftHand,
       RightHand,
+      BackElement,
       cardArr,
       mockupArr,
       cardIdx,

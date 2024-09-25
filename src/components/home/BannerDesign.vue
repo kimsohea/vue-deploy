@@ -25,11 +25,18 @@
         <li><button @click.prevent="handleClose">close</button></li>
       </ul>
     </article>
+    <figure class="deco">
+      <img :src="BnrBack1" alt="배너 소개 단락 뒷배경 꾸밈 요소" />
+      <img :src="BnrBack2" alt="배너 소개 단락 뒷배경 꾸밈 요소" />
+    </figure>
   </section>
 </template>
 
 <script>
 import { ref, computed } from 'vue'
+
+import BnrBack1 from '@/assets/img/mockup_back_01.png'
+import BnrBack2 from '@/assets/img/mockup_back_02.png'
 
 import BnrCard01 from '@/assets/img/bannerCard_01.png'
 import BnrCard02 from '@/assets/img/bannerCard_02.png'
@@ -133,6 +140,8 @@ export default {
       CatHand,
       bnrCardArr,
       bnrMockupArr,
+      BnrBack1,
+      BnrBack2,
       bnrIdx,
       isMockupActive,
 

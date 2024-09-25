@@ -1,4 +1,6 @@
 section {
+    min-width: 1450px;
+
     >h2 {
         &:before {
             position: absolute;
@@ -451,6 +453,137 @@ $cardBtm: -115px;
 
                 &:nth-child(2) {
                     transform: translate(3%, -3%) rotateY(180deg);
+                }
+            }
+        }
+    }
+
+    .util_pop {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 1000px;
+        height: 600px;
+        border-radius: 20px;
+        background-color: $subColor;
+        transform: translate(-50%, -190%) rotate(0deg);
+        box-shadow: 0 20px 40px #5d0f6685;
+        z-index: 4;
+
+        .util_list {
+            position: relative;
+            opacity: 0;
+            padding: 20px;
+            box-sizing: border-box;
+
+            li {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: calc(100% - 40px);
+                padding-top: 20px;
+                opacity: 0;
+
+                .card_img {
+                    position: relative;
+                    width: 215px;
+                    height: 385px;
+
+                    &::before {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        backface-visibility: hidden;
+                        background-image: url(#{$assetPath}/trumpIcon_01.png);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        content: '';
+                        animation: cardRotate2 3s linear infinite;
+                    }
+
+                    &::after {
+                        position: absolute;
+                        left: 50%;
+                        bottom: 0;
+                        content: '';
+                        width: 310px;
+                        height: 35px;
+                        background-color: #72116E;
+                        border-radius: 50%;
+                        filter: blur(8px) opacity(0.25);
+                        transform: translate(-50%, 20px);
+                        z-index: -1;
+                    }
+
+                    img {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        backface-visibility: hidden;
+                        animation: cardRotate1 3s linear infinite;
+                    }
+                }
+
+                strong {
+                    display: block;
+                    margin-top: 20px;
+                    font-size: 20px;
+                    color: $baseColor;
+                    font-weight: 700;
+                }
+
+                p {
+                    width: 90%;
+                    margin: 10px auto 0;
+                    font-size: 16px;
+                    text-align: center;
+                    color: $baseColor;
+                    word-break: keep-all;
+                }
+
+                &.active {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .close_btn {
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+            transform: translateX(-50%);
+            cursor: pointer;
+            background-color: transparent;
+            border: 0;
+            font-size: 25px;
+            color: $baseColor;
+        }
+
+        &.active {
+            animation: skillAniOpen 2s ease forwards;
+
+            .util_list {
+                opacity: 1;
+                transition: opacity 1s ease 1s;
+            }
+
+            &.close {
+                animation: skillAniClose 1.5s ease forwards;
+            }
+        }
+
+    }
+
+    @media screen and (max-width: 1400px) {
+        .deco {
+            &.active {
+                li {
+                    transform: translate(-50%, -50%);
+
+                    &:nth-child(2) {
+                        transform: translate(50%, -50%) rotateY(180deg);
+                    }
                 }
             }
         }
@@ -908,7 +1041,7 @@ $cardBtm: -115px;
             }
 
             &:nth-of-type(2) {
-                transform: translate(620px, -30px) rotateZ(7deg) rotateY(180deg);
+                transform: translate(390px, 240px) rotateZ(7deg) rotateY(180deg);
             }
         }
     }
@@ -929,23 +1062,24 @@ $cardBtm: -115px;
 
     .hand_left {
         position: absolute;
+        left: 50%;
         width: 315px;
-        transform: rotate(-90deg) translate(-65px, 70px);
+        transform: rotate(-90deg) translate(-20%, -290%);
         z-index: 2;
     }
 
     .hand_right {
         position: absolute;
-        right: 50px;
+        right: 50%;
         bottom: -110px;
         width: 300px;
-        transform: rotate(-107deg);
+        transform: translateX(300%) rotate(-107deg);
         z-index: -1;
     }
 
     .card_popup {
         position: relative;
-        width: 1300px;
+        width: 1200px;
         height: 300px;
         margin: 150px auto;
         perspective: 750px;

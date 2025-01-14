@@ -1610,3 +1610,63 @@ $cardBtm: -115px;
         }
     }
 }
+
+.site_outtro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+
+    .mascot {
+        position: relative;
+        width: 650px;
+
+        .mas_speech {
+            position:absolute;
+            top:0;
+            left: 400px;
+            display: flex;
+            align-items: center;
+            min-width: 100px;
+            height: 22px;
+            background-color: $subColor;
+            color:$baseColor;
+            border: 15px solid $subColor;
+            border-radius: 15px;
+            font-size: 1.3rem;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 5px;
+                bottom: -27px;
+                display: block;
+                background-color: $subColor;
+                width: 10px;
+                height: 15px;
+                clip-path: polygon(0 0, 0 100%, 100% 0);
+                
+            }
+        }
+    }
+
+    .business_card {
+        color: $subColor;
+        padding: 25px 95px;
+        border-radius: 20px;
+        font-size: 1.3rem;
+        text-align: center;
+
+        &::before {
+            display: block;
+            width: 80px;
+            height: 72px;
+            margin: 0 auto 10px;
+            background-image: url(#{$assetPath}/hart.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            content: '';
+            
+        }
+    }
+}

@@ -7,6 +7,7 @@
     <AnnounceAladin />
     <PopupDesign />
     <BannerDesign />
+    <Outtro />
   </main>
 </template>
 
@@ -20,6 +21,7 @@ import IntroAladin from '@/components/home/IntroAladin.vue'
 import AnnounceAladin from '@/components/home/AnnounceAladin.vue'
 import PopupDesign from '@/components/home/PopupDesign.vue'
 import BannerDesign from '@/components/home/BannerDesign.vue'
+import Outtro from '@/components/home/Outtro.vue'
 
 export default {
   components: {
@@ -29,7 +31,8 @@ export default {
     IntroAladin,
     AnnounceAladin,
     PopupDesign,
-    BannerDesign
+    BannerDesign,
+    Outtro
   },
   setup() {
     // refs

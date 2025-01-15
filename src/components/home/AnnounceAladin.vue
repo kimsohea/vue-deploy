@@ -6,7 +6,9 @@
         :key="`site_img_${idx}`"
         :class="idx === screenIdx ? 'active' : ''"
       >
-        <a href="/"><img :src="item" alt="알라딘 웹사이트 목업" /></a>
+        <a href="https://kimsohea.github.io/react-deploy/" target="_blank"
+          ><img :src="item" alt="알라딘 웹사이트 목업"
+        /></a>
       </li>
     </ul>
     <figure class="beam_pro">

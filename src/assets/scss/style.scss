@@ -687,7 +687,7 @@ $cardBtm: -115px;
                 content: '';
                 position: absolute;
                 right: 20px;
-                bottom: -12px;
+                bottom: -10px;
                 width: 12px;
                 height: 12px;
                 background-color: $subColor;
@@ -701,6 +701,26 @@ $cardBtm: -115px;
             flex-wrap: wrap;
             width: calc(100% - 640px);
             color: $subColor;
+            font-size:1.3rem;
+
+            h3 {
+                position: relative;
+                margin-bottom: 15px;
+                font-size: 1.5rem;
+
+                &::before {
+                    position:absolute;
+                    left: -35px;
+                    top: 0;
+                    content:"";
+                    display: block;
+                    width: 30px;
+                    height: 25px;
+                    background-image: url('#{$assetPath}/hart.png');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
 
             &:not(a) {
                 pointer-events: none;
@@ -708,15 +728,56 @@ $cardBtm: -115px;
 
             >li {
                 width: 50%;
-                height: calc(100% / 3);
+                max-height: calc(100% / 3);
+                margin-bottom:20px;
+                line-height: 1.8rem;
+
+                span {
+                    display:block;
+                    font-size: 1rem;
+                }
             }
 
             .public_site {
                 height: 100%;
 
                 li {
+                    font-size: 1.4rem;
+                    margin-bottom:5px;
+
                     a {
+                        position: relative;
+                        padding-left: 15px;
                         pointer-events: initial;
+
+                        &::before,&:after {
+                            position:absolute;
+                            top: 5px;
+                            right: -15px;
+                            display: block;
+                            width: 15px;
+                            height: 3px;
+                            border-radius: 10px;
+                            background-color: $subColor;
+                            content: "";
+                            transform:rotate(-45deg);
+                            transform-origin: top right;
+                        }
+
+                        &:after {
+                            top: 5      .5px;
+                            right: -17.25px;
+            width: 9px;
+    height: 9px;
+                            background-color: transparent;
+                            border: 3px solid #fcca00;
+                            border-left-width: 0;
+                            border-bottom-width: 0;
+                            border-radius: 2px;
+                            border-collapse: collapse;
+                            transform: rotate(0deg);
+                        
+                        }
                     }
                 }
             }

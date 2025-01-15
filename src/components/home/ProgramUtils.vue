@@ -71,7 +71,11 @@
         <li :class="activeIdx === 6 ? 'active' : ''">
           <figure class="card_img"><img :src="imgArr[6]" alt="" /></figure>
           <strong>Vue.js</strong>
-          <p>Component를 이용한 반복 단락을 처리할 수 있으며</p>
+          <p>
+            v-for을 이용한 Component반복 사용을 할 수 있습니다. import를 통한 컴포넌트 불러오기 및
+            App.js로 가져와 그 vue 파일을 main.js로 가져옴을 통해 vue 프로젝트를 운용하는 것을
+            이해하고 있습니다. 또한 이 사이트는 vite 빌드툴 내의 vue 템플릿을 이용하여 만들었습니다.
+          </p>
         </li>
         <li :class="activeIdx === 7 ? 'active' : ''">
           <figure class="card_img"><img :src="imgArr[7]" alt="" /></figure>

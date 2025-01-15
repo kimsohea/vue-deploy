@@ -8,7 +8,7 @@
       kakao Id: kimsohea4425<br />
       E-mail: <a href="mailto:kimsohea4425@gmail.com">kimsohea4425@gmail.com</a><br />
       github Id: kimsohea4425@gmail.com<br />
-      <a href="https://github.com/kimsohea">github page 바로가기</a><br />
+      <a href="https://github.com/kimsohea" target="_blank">github page 바로가기</a><br />
     </address>
   </section>
 </template>

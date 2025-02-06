@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { onMounted, onUnmounted, computed, ref } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 
 import outtroCat from '@/assets/img/ending.png'
 
